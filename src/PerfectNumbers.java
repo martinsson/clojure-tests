@@ -91,5 +91,4 @@ public class PerfectNumbers {
             perfectNumbers.remove(0);
             return (List<Integer>) perfectNumbers;
         }
-
 }
