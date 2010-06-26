@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import static java.util.Arrays.asList;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
@@ -51,5 +52,22 @@ public class PerfectNumbersTest {
 	private boolean isPerfect(int number) {
 		return perfectNumbers.isPerfect(number);
 	}
+
+        List<Integer> perfectNumbersInRange() {
+            List<Integer> range = range(10);
+            List<Integer> ret = new ArrayList<Integer>();
+            for (Integer number : range) {
+                if (isPerfect(number)) ret.add(number);
+            }
+            return ret;
+        }
+
+        private List<Integer> range(int ulimit) {
+            List<Integer> range = new ArrayList<Integer>();
+            for (int j = 1; j <= ulimit; j++) {
+                range.add(j);
+            }
+            return range;
+        }
 	
 }
